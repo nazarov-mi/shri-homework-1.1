@@ -1,0 +1,494 @@
+/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+span {
+  font: inherit;
+}
+
+strong {
+  color: inherit;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+embed,
+object,
+audio,
+video {
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input {
+  color: inherit;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  vertical-align: baseline;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+a strong {
+  color: currentColor;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/*! Bulma v0.6.1 | MIT License | github.com/jgthms/bulma */
+html {
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  color: #000000;
+  font-family: "YS Text", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.42857rem;
+}
+
+.hidden {
+  position: fixed;
+  top: -99999px;
+  left: -99999px;
+  width: 0;
+  height: 0;
+}
+
+.logo {
+  margin: 40px 0;
+}
+
+.logo img {
+  width: 120px;
+}
+
+@media screen and (min-width: 640px) {
+  .logo img {
+    width: 90px;
+  }
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto 46px;
+  padding: 0 8px;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  grid-gap: 30px 16px;
+}
+
+@media screen and (min-width: 480px), print {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.article--sm, .article--md, .article--lg {
+  grid-column: span 1;
+}
+
+@media screen and (min-width: 480px), print {
+  .article--sm {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 280px;
+  }
+  .article--md, .article--lg {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .article--sm {
+    grid-column: span 2;
+    height: 234px;
+  }
+  .article--md {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-column: span 3;
+    height: 306px;
+  }
+  .article--lg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 0 16px;
+    grid-column: span 6;
+    height: 245px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article--sm {
+    height: 280px;
+  }
+  .article--md {
+    height: 360px;
+  }
+  .article--lg {
+    height: 300px;
+  }
+}
+
+.article__title {
+  overflow: hidden;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.article--md .article__title,
+.article--lg .article__title {
+  font-size: 1.35714rem;
+  line-height: 1.64286rem;
+}
+
+.article--sm .article__title {
+  font-size: 1.21429rem;
+  line-height: 1.42857rem;
+}
+
+@media screen and (min-width: 480px), print {
+  .article--sm .article__title {
+    grid-row: span 1;
+    max-height: 4.28571rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .article--md .article__title {
+    grid-column: span 2;
+    grid-row: span 1;
+    max-height: 4.92857rem;
+  }
+  .article--lg .article__title {
+    grid-column: span 1;
+    grid-row: span 1;
+    max-height: 3.28572rem;
+  }
+}
+
+.article__image {
+  position: relative;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.article__image img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px), print {
+  .article--sm .article__image {
+    grid-row: span 1;
+  }
+  .article--sm .article__image img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .article--md .article__image img,
+  .article--lg .article__image img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+  }
+  .article--md .article__image {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .article--lg .article__image {
+    grid-column: 1/3;
+    grid-row: 1/4;
+    margin-top: 0;
+    border-radius: 6px;
+  }
+}
+
+.article__desc {
+  max-height: 5.71429rem;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 480px), print {
+  .article--sm .article__desc {
+    grid-row: span 1;
+    max-height: none;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .article--md .article__desc,
+  .article--lg .article__desc {
+    max-height: none;
+  }
+  .article--md .article__desc {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 4.28571rem;
+  }
+  .article--lg .article__desc {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+.article__aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 480px), print {
+  .article--sm .article__aside {
+    grid-row: span 1;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .article__aside {
+    margin-top: 8px;
+  }
+  .article--sm .article__aside {
+    margin-bottom: 8px;
+  }
+  .article--sm .article__image ~ .article__aside {
+    display: none;
+  }
+  .article--md .article__aside {
+    grid-column: span 1;
+    grid-row: span 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .article--lg .article__aside {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+.article__more, .article__like {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  margin: 0 8px;
+  cursor: pointer;
+  fill: #d3d3d3;
+  pointer-events: all;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.article__more svg, .article__like svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.article__more:hover, .article__more:active {
+  fill: #000000;
+}
+
+.article__like:hover, .article__like:active {
+  fill: #e91e63;
+}
+
+.article__image .article__more,
+.article__image .article__like {
+  display: none;
+}
+
+@media screen and (min-width: 640px) {
+  .article__more, .article__like {
+    margin: 0 6px;
+  }
+  .article__more svg, .article__like svg {
+    width: 16px;
+    height: 16px;
+  }
+  .article--sm .article__image .article__more,
+  .article--sm .article__image .article__like {
+    position: absolute;
+    right: 6px;
+    z-index: 2;
+    display: block;
+  }
+  .article--sm .article__image .article__more:hover, .article--sm .article__image .article__more:active,
+  .article--sm .article__image .article__like:hover,
+  .article--sm .article__image .article__like:active {
+    fill: white;
+  }
+  .article__image .article__more {
+    top: 6px;
+  }
+  .article__image .article__like {
+    bottom: 10px;
+  }
+}
+
+.article__channel-name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

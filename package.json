@@ -1,0 +1,32 @@
+{
+  "name": "shri_2018_css_homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true sass/app.sass css/style.css",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/style.css css/style.css",
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
+    "dev": "npm run build-sass -- --watch ./sass"
+  },
+  "author": "Nazarov MI (m@nazarov-mi.ru)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "node-sass": "^4.7.2",
+    "postcss-cli": "^5.0.0",
+    "rimraf": "^2.6.2"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "grid": true
+      }
+    }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 5%"
+  ]
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ZEN</title>
+	<link rel="stylesheet" href="fonts/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="logo">
+			<img
+				src="img/zen_logo.png"
+				srcset="img/zen_logo.png 320w, img/zen_logo@2x.png 480w, img/zen_logo@3x.png 800w"
+				sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+				alt="ZEN"
+				title="ZEN"
+			>
+		</div>
+		<div class="grid" id="articles_container"></div>
+	</div>
+
+	<template id="article_template">
+		<article class="article">
+			<h2 class="article__title"></h2>
+			<div class="article__image">
+				<a class="article__more" href="javascript:void(0)">
+					<svg xmlns:xlink="http://www.w3.org/1999/xlink">
+						<use xlink:href="#more"/>
+					</svg>
+				</a>
+				<a class="article__like" href="javascript:void(0)">
+					<svg xmlns:xlink="http://www.w3.org/1999/xlink">
+						<use xlink:href="#like"/>
+					</svg>
+				</a>
+			</div>
+			<div class="article__desc"></div>
+			<div class="article__aside">
+				<div class="article__channel-name"></div>
+				<a class="article__more" href="javascript:void(0)">
+					<svg xmlns:xlink="http://www.w3.org/1999/xlink">
+						<use xlink:href="#more"/>
+					</svg>
+				</a>
+				<a class="article__like" href="javascript:void(0)">
+					<svg xmlns:xlink="http://www.w3.org/1999/xlink">
+						<use xlink:href="#like"/>
+					</svg>
+				</a>
+			</div>
+		</article>
+	</template>
+
+	<svg class="hidden" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<symbol id="like" viewBox="0 0 510 510">
+			<path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
+		</symbol>
+		<symbol id="more" viewBox="2 2 20 20">
+			<path d="M0 0h24v24H0z" fill="none"/>
+			<path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+		</symbol>
+	</svg>
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/template-compiler.js"></script>
+	<script type="text/javascript">
+		(function () {
+			const container = document.querySelector('#articles_container')
+			new TemplateCompiler(container, data)
+		})()
+	</script>
+</body>
+</html>
